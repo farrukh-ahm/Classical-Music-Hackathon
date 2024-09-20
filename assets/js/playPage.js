@@ -1,3 +1,7 @@
+function handleRedirectToLandingPage() {
+    window.location.href = "index.html";
+}
+
 function pickNote(note) {
     console.log(note)
 }
