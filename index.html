@@ -1,0 +1,46 @@
+<!-- ver 4 oct 2023 validated -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@900&family=Tilt+Neon&display=swap');
+    </style>
+    <script src="https://kit.fontawesome.com/4b0d3e328e.js" crossorigin="anonymous"></script>
+    <title>Title</title>
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <div>
+        <h1>Hello</h1>
+        <button onclick="pickNote('A'); addNote('A')">note A</button>
+        <button onclick="pickNote('B'); addNote('B')">note B</button>
+        <button onclick="pickNote('C'); addNote('C')">note C</button>
+        <button onclick="pickNote('D'); addNote('D')">note D</button>
+        <button onclick="pickNote('E'); addNote('E')">note E</button>
+        <button onclick="pickNote('F'); addNote('F')">note F</button>
+        <button onclick="pickNote('G'); addNote('G')">note G</button>
+        <br/>
+        <button onclick="pickNote('C#'); addNote('C#')">note C#</button>
+        <button onclick="pickNote('D#'); addNote('D#')">note D#</button>
+        <button onclick="pickNote('F#'); addNote('F#')">note F#</button>
+        <button onclick="pickNote('G#'); addNote('G#')">note G#</button>
+        <button onclick="pickNote('A#'); addNote('A#')">note A#</button>
+    </div>
+
+    <p id="demo"></p>
+    <p id="note1"></p>
+    <p id="note2"></p>
+    <p id="note3"></p>
+    <p id="note4"></p>
+    <p id="note5"></p>
+    <button onclick="eraseNote()">delete</button>
+
+</body>
+<footer>
+</footer>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
