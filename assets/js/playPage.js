@@ -70,6 +70,14 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
+const computerNotearray = ['C', 'D', 'E', 'F', 'G']; // placecholder array, this will be changed later by whoever code the generate notes system
+computerNotearray.forEach((note, index) => { // placeholder function to render the array, this will also be changed later
+    const paragraph = document.getElementById(`computerNote${index + 1}`);
+    if (paragraph) {
+        paragraph.textContent = note;
+    }
+})
+
 const noteArray = [];
 function renderSelectedNote(index) {
     return noteArray[index] !== undefined ? noteArray[index] : "";

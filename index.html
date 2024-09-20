@@ -1,8 +1,19 @@
 <!-- index.html assigned as the landing page -->
-<head></head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link href="assets/css/landing-page.css" rel="stylesheet" type="text/css">
+</head>
 <body>
-    <h1>Landing Page</h1>
-    <button onclick="handleRedirectToPlay()">Play</button>
-    <button onclick="handleRedirectToAbout()">About</button>
+    <div class="landingPageContainer">
+        <h1>Landing Page</h1>
+        <div class="navigationButtonContainer">
+            <button class="navigationButton" onclick="handleRedirectToPlay()">Play</button>
+            <button class="navigationButton" onclick="handleRedirectToAbout()">About</button>
+        </div>
+    </div>
     <script src="assets/js/landingPage.js"></script>
 </body>
+</html>
