@@ -1,3 +1,6 @@
+let currentNotes = []
+let playerNotes = []
+
 function handleRedirectToLandingPage() {
     window.location.href = "index.html";
 }
@@ -96,4 +99,32 @@ function addNote(note) {
 function eraseNote() {
     noteArray.pop();
     updateNotes();
+}
+
+
+//------- Function to check the answer ------------------
+const checkAnswer = () =>{
+
+    let results = {
+        "correctAnswer": "",
+        "correctNotes": 0
+    }
+
+    let correctNotes = 0
+
+    if(JSON.stringify(currentNotes) === JSON.stringify(playerNotes)){
+        results["correctAnswer"] = true
+        results["correctNotes"] = playerNotes.length
+        return results
+    }
+
+    for(let i=0; i<playerNotes.length; i++){
+        if(currentNotes[i]===playerNotes[i]){
+            correctNotes++
+        }
+    }
+
+    results["correctAnswer"]=  false
+    results["correctNotes"] = correctNotes
+    return results
 }
