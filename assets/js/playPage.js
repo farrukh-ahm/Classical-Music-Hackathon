@@ -24,7 +24,7 @@ const keyToSoundMap = {
 }
 
 // add event listeners to each SVG key to ensure click functionality and push the key to playerNotes array 
-document.getElementById('note-c').addEventListener('click', function() {
+document.getElementById('note-c1').addEventListener('click', function() {
     playerNotes.push('C');
     playSound(keyToSoundMap['C']);
 });
@@ -59,7 +59,7 @@ document.getElementById('note-b').addEventListener('click', function() {
     playSound(keyToSoundMap['B']);
 });
 
-document.getElementById('note-c').addEventListener('click', function() {
+document.getElementById('note-c2').addEventListener('click', function() {
     playerNotes.push('C');
     playSound(keyToSoundMap['C']);
 });
