@@ -1,5 +1,7 @@
 let currentNotes = []
-let playerNotes = []
+
+// create the playerNotes array
+let playerNotes =[];
 
 function handleRedirectToLandingPage() {
     window.location.href = "index.html";
@@ -8,9 +10,6 @@ function handleRedirectToLandingPage() {
 function pickNote(note) {
     console.log(note)
 }
-
-// create the playerNotes array
-let playerNotes =[];
 
 // map piano keys to their sound files
 const keyToSoundMap = {
