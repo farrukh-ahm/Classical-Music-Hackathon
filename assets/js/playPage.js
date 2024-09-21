@@ -131,12 +131,12 @@ const checkAnswer = () =>{
 
 //------- Game Over ------------------
 const testy = `
-    <div class="gameOverContainer">
-        <div class="gameOverCard">
+    <div class="game-over-container">
+        <div class="game-over-card">
             <h1>Game Over!</h1>
             <hr/>
             <p>Final Score: <span id="showFinalScore">0</span></p>
-            <button class="playAgainButton" onclick="handleResetGame()">Play again</button>
+            <button class="play-again-button" onclick="handleResetGame()">Play again</button>
         </div>
     </div>
     `
