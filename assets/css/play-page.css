@@ -1,0 +1,119 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+object{ /* vector graphics can distrupt input, keep this to none */
+    pointer-events: none;
+}
+
+.playPageContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.navigationButtonContainer{
+    background-color: rgb(220, 220, 220);
+    padding: 25px;
+    border-radius: 5px;
+}
+
+.navigationButton{
+    width: 100px;
+    height: 50px;
+}
+
+.pianoContainer{
+    width: 600px;
+    height: 300px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+
+}
+
+#test,
+#note-c1,
+#note-d,
+#note-e,
+#note-f,
+#note-g,
+#note-a,
+#note-b,
+#note-c2{
+    fill: rgb(220, 220, 220);
+}
+
+#note-c-sharp,
+#note-d-sharp,
+#note-f-sharp,
+#note-g-sharp,
+#note-a-sharp{
+    fill: rgb(20, 20, 20);
+}
+
+#test:hover,
+#note-c1:hover,
+#note-d:hover,
+#note-e:hover,
+#note-f:hover,
+#note-g:hover,
+#note-a:hover,
+#note-b:hover,
+#note-c2:hover,
+#note-c-sharp:hover,
+#note-d-sharp:hover,
+#note-f-sharp:hover,
+#note-g-sharp:hover,
+#note-a-sharp:hover{
+    fill: rgb(250, 0, 0);
+    cursor: pointer;
+}
+
+.selectedNotesContainer{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    border: 2px solid rgb(20, 20, 20);
+    border-left-width: 4px;
+    border-right-width: 4px;
+    border-radius: 3px;
+}
+
+#note1,
+#note2,
+#note3,
+#note4,
+#note5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    min-height: 50px;
+    border-bottom: 1px solid rgb(20,20,20);
+    margin: 5px;
+    font-size: 30px;
+}
+
+#computerNote1,
+#computerNote2,
+#computerNote3,
+#computerNote4,
+#computerNote5,
+#EmptyPlaceholder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    min-height: 50px;
+    margin: 5px;
+    font-size: 30px;
+}
+
+.eraseButton{
+    width: 60px;
+    height: 60px;
+}
