@@ -1,3 +1,4 @@
+![Hackathon September](/documents/hackathon.png)
 # [Classical Music Game](https://github.com/Dee-McG/Classical-Music-Hackathon)
 
 A Responsive Application for users to play the Game Classical Music.
@@ -5,7 +6,7 @@ A Responsive Application for users to play the Game Classical Music.
 
 HTML / CSS / Javascript / Bootstrap
 
-**By [Name of the Team]**
+**By Note in Mind**
 
 ![AmIResponsive]()
 

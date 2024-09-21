@@ -42,111 +42,36 @@ body{
 }
 
 .navigationButton{
-    width: 150px;
-    height: 80px;
-    padding: 15px 32px;
-    background-color:blue;
-    border-radius: 15px;
-    font-weight: bold;
-    font-size: 18px;
-    font-family: monospace;
-    color: white;
-    padding: 20px;
-    margin-left: 10px;
-    text-align: center;
-    cursor: pointer;
-    justify-content: center;  
-    align-items: center;  
-    
+    width: 100px;
+    height: 50px;
 }
 
-.navigationButton:hover{
-    background-color: red;
-    color: white;
-}
-
-/* Heading Section */
-.Heading{
+.rules-modal{
     position: absolute;
-    top: 80px;
-    font-size: 70px;
-    font-weight: 600;
-    background-size: 250px;
-    background-repeat: repeat;
-    font-family: "Times New Roman", Times, serif;
-    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    min-inline-size: min(100vw, 20rem);
+    min-block-size: 30dvh;
+    padding: 2em;
+    backdrop-filter: blur(8px);
+    border: 1px solid #505050;
 }
 
-/* Music Notes Animation */
-.muzieknootjes {
-    display: block;
-    margin: auto;
-    position: relative;
-    width: 50%;
-    min-width: 300px;
-    height: 200px;
-    border: 0px solid #000;
-  }
-  
-  .noot-1,
-  .noot-2,
-  .noot-3,
-  .noot-4 {
-    position: absolute;
-    animation: notes 2s infinite linear;
-    font-size: 35px;
-    opacity: 0;
-  }
-  
-  .noot-1 {
-    top: 60px;
-    left: 0;
-    animation-delay: 0.5s;
-  }
-  
-  .noot-2 {
-    top: 30px;
-    left: 30%;
-    animation-delay: 1s;
-  }
-  
-  .noot-3 {
-    top: 90px;
-    left: 60%;
-    animation-delay: 1.5s;
-  }
-  
-  .noot-4 {
-    top: 40px;
-    left: 90%;
-    animation-delay: 2s;
-  }
-  
-  @keyframes notes {
-    0% {
-      transform: scale(1) translate(0, 0);
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-      transform: scale(1.5) translate(50%, -50%);
-    }
-    80% {
-      opacity: 0;
-      transform: scale(1.5) translate(100%, -100%);
-    }
-    100% {
-      transform: scale(1.5) translate(100%, -100%);
-      opacity: 0;
-    }
-  }
-  
-  /* Group caption Section */
-  .caption{
+.rules-modal::backdrop{background-color:rgba(0,0,0,0.5);}
+
+.rules-title{
     text-align: center;
-    position: relative;
-    top: -240px; 
-    left: 10px;
-    font-size: 30px;
-  }
-  
+}
+
+.rules-container{
+    padding-block: 2em;
+}
+
+.button-container{
+    text-align: center;
+}
+.modal-button{
+    width: 100px;
+    height: 50px;
+}
