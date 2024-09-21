@@ -6,69 +6,56 @@ function pickNote(note) {
     console.log(note)
 }
 
-// use computer keyboard as piano keyboard
-document.addEventListener('keydown', function(event) {
-    // flat
-    if (event.key === 's') {
-        pickNote('C');
-        addNote('C');
-    }
-    if (event.key === 'd') {
-        pickNote('D');
-        addNote('D');
-    }
-    if (event.key === 'f') {
-        pickNote('E');
-        addNote('E');
-    }
-    if (event.key === 'g') {
-        pickNote('F');
-        addNote('F');
-    }
-    if (event.key === 'h') {
-        pickNote('G');
-        addNote('G');
-    }
-    if (event.key === 'j') {
-        pickNote('A');
-        addNote('A');
-    }
-    if (event.key === 'k') {
-        pickNote('B');
-        addNote('B');
-    }
-    if (event.key === 'l') {
-        pickNote('C');
-        addNote('C');
-    }
+// map piano keys to their sound files
+const keyToSoundMap = {
+    'C': 'assets/music-notes/piano-c_C_major.wav',
+    'D': 'assets/music-notes/piano-d_D_major.wav',
+    'E': 'assets/music-notes/piano-e_E_major.wav',
+    'F': 'assets/music-notes/piano-f_F_major.wav',
+    'G': 'assets/music-notes/piano-g_G_major.wav',
+    'A': 'assets/music-notes/piano-a_A_major.wav',
+    'B': 'assets/music-notes/piano-b_B_major.wav',
+    'C': 'assets/music-notes/piano-c_C_major.wav',
+}
 
-    // sharp
-    if (event.key === 'e') {
-        pickNote('C#');
-        addNote('C#');
-    }
-    if (event.key === 'r') {
-        pickNote('D#');
-        addNote('D#');
-    }
-    if (event.key === 'y') {
-        pickNote('F#');
-        addNote('F#');
-    }
-    if (event.key === 'u') {
-        pickNote('G#');
-        addNote('G#');
-    }
-    if (event.key === 'i') {
-        pickNote('A#');
-        addNote('A#');
-    }
-
-    // erase
-    if (event.key === 'Backspace') {
-        eraseNote();
-    }
+// add event listeners to each SVG key to ensure click functionality
+document.getElementById('note-c').addEventListener('click', function() {
+    playSound(keyToSoundMap['C']);
 });
+
+document.getElementById('note-d').addEventListener('click', function() {
+    playSound(keyToSoundMap['D']);
+});
+
+document.getElementById('note-e').addEventListener('click', function() {
+    playSound(keyToSoundMap['E']);
+});
+
+document.getElementById('note-f').addEventListener('click', function() {
+    playSound(keyToSoundMap['F']);
+});
+
+document.getElementById('note-g').addEventListener('click', function() {
+    playSound(keyToSoundMap['G']);
+});
+
+document.getElementById('note-a').addEventListener('click', function() {
+    playSound(keyToSoundMap['A']);
+});
+
+document.getElementById('note-b').addEventListener('click', function() {
+    playSound(keyToSoundMap['B']);
+});
+
+document.getElementById('note-c').addEventListener('click', function() {
+    playSound(keyToSoundMap['C']);
+});
+    
+// sound playback function
+function playSound(audioSrc) {
+    const audio = new Audio(audioSrc);
+    audio.play();
+}
 
 const computerNotearray = ['C', 'D', 'E', 'F', 'G']; // placecholder array, this will be changed later by whoever code the generate notes system
 computerNotearray.forEach((note, index) => { // placeholder function to render the array, this will also be changed later
