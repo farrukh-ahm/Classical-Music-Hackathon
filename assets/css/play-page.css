@@ -5,7 +5,6 @@
     --white: #EBEBEB;
     --white-offset: #D7D1CD;
 }
-
 *{
     margin: 0px;
     padding: 0px;
@@ -75,20 +74,22 @@ object{ /* vector graphics can distrupt input, keep this to none */
     height: 66vh; /* 2/3rds */
 }
 
-
-.navigationButton{
-    width: 100px;
-    height: 50px;
+#headerText{
+    color: var(--dark);
+}
+#scoreDisplay{
+    color: var(--theme-secondary);
 }
 
 .pianoContainer{
     width: 600px;
     height: 300px;
     border: 2px solid var(--dark);
+    border-top-width: 5px;
     border-radius: 10px;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
-
+    box-shadow: 0px 5px 25px rgba(0,0,0,0.15);
 }
 
 #test,
@@ -134,8 +135,8 @@ object{ /* vector graphics can distrupt input, keep this to none */
     flex-direction: row;
     border: 2px solid var(--dark);
     background-color: var(--white);
-    border-left-width: 4px;
-    border-right-width: 4px;
+    border-left-width: 5px;
+    border-right-width: 5px;
     border-radius: 3px;
     width: auto;
 }
@@ -159,11 +160,15 @@ object{ /* vector graphics can distrupt input, keep this to none */
 }
 .eraseButton{
     background-color: rgba(0,0,0,0);
+    border: 2px solid var(--dark);
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-radius: 3px;
+    box-shadow: 0px 5px 25px rgba(0,0,0,0.15);
 }
 .eraseButton:hover{
     background-color: var(--white-offset);
 }
-
 
 #computerNote1,
 #computerNote2,
@@ -178,4 +183,45 @@ object{ /* vector graphics can distrupt input, keep this to none */
     min-height: 50px;
     margin: 5px;
     font-size: 30px;
+}
+
+#heart1,
+#heart2,
+#heart3{
+    margin: 5px;
+    fill: var(--theme);
+}
+
+@media only screen and (max-width: 750px) {
+    .verticalLine{
+        border-left: 10px hidden var(--white-offset);
+        border-right: 10px hidden var(--white-offset);
+    }
+    #note1,
+    #note2,
+    #note3,
+    #note4,
+    #note5,
+    .eraseButton{
+        min-width: 50px;
+        min-height: 50px;
+        font-size: 15px;
+        margin: 5px;
+        font-size: 25px;
+    }
+    .eraseButton{
+        background-color: rgba(0,0,0,0);
+        border: 2px solid var(--dark);
+        border-left-width: 5px;
+        border-right-width: 5px;
+        border-radius: 3px;
+        box-shadow: 0px 5px 25px rgba(0,0,0,0.15);
+    }
+    .eraseButton:hover{
+        background-color: var(--white-offset);
+    }
+    .pianoContainer{
+        width: 300px;
+        height: 150px;
+    }
 }
