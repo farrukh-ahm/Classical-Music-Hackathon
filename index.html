@@ -11,9 +11,29 @@
         <h1>Landing Page</h1>
         <div class="navigationButtonContainer">
             <button class="navigationButton" onclick="handleRedirectToPlay()">Play</button>
-            <button class="navigationButton" onclick="handleRedirectToAbout()">About</button>
+            <button class="navigationButton" data-type="rules-modal-trigger">About</button>
         </div>
     </div>
+
+    <dialog class="rules-modal">
+            
+        <h2 class="rules-title">Rules</h2>
+        
+        <div class="rules-container">
+            <ul>
+                <li>Rule 1</li>
+                <li>Rule 2</li>
+                <li>Rule 3</li>
+                <li>Rule 4</li>
+            </ul>
+        </div>
+
+        <div class="button-container">
+            <button class="modal-button" data-type="rules-modal-close">Close</button>
+        </div>
+
+    </dialog>
+
     <script src="assets/js/landingPage.js"></script>
 </body>
 </html>
