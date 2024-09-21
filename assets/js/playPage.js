@@ -110,7 +110,7 @@ const checkAnswer = () =>{
         "correctNotes": 0
     }
 
-    let correctNotes = 0
+    let correctNotes = 490
 
     if(JSON.stringify(currentNotes) === JSON.stringify(playerNotes)){
         results["correctAnswer"] = true
@@ -127,4 +127,23 @@ const checkAnswer = () =>{
     results["correctAnswer"]=  false
     results["correctNotes"] = correctNotes
     return results
+}
+
+//------- Game Over ------------------
+const testy = `
+    <div class="gameOverContainer">
+        <div class="gameOverCard">
+            <h1>Game Over!</h1>
+            <hr/>
+            <p>Final Score: <span id="showFinalScore">0</span></p>
+            <button class="playAgainButton" onclick="handleResetGame()">Play again</button>
+        </div>
+    </div>
+    `
+
+function handleDisplayGameOver() {
+    document.getElementById("gameOverDisplay").innerHTML = testy;
+}
+function handleResetGame() {
+    window.location.href = "play-page.html";
 }
