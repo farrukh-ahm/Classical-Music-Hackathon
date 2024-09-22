@@ -27,41 +27,49 @@ const keyToSoundMap = {
 document.getElementById("note-c1").addEventListener("click", function () {
   playerNotes.push("C");
   playSound(keyToSoundMap["C"]);
+  handleScoreAndLives();
 });
 
 document.getElementById("note-d").addEventListener("click", function () {
   playerNotes.push("D");
   playSound(keyToSoundMap["D"]);
+  handleScoreAndLives();
 });
 
 document.getElementById("note-e").addEventListener("click", function () {
   playerNotes.push("E");
   playSound(keyToSoundMap["E"]);
+  handleScoreAndLives();
 });
 
 document.getElementById("note-f").addEventListener("click", function () {
   playerNotes.push("F");
   playSound(keyToSoundMap["F"]);
+  handleScoreAndLives();
 });
 
 document.getElementById("note-g").addEventListener("click", function () {
   playerNotes.push("G");
   playSound(keyToSoundMap["G"]);
+  handleScoreAndLives();
 });
 
 document.getElementById("note-a").addEventListener("click", function () {
   playerNotes.push("A");
   playSound(keyToSoundMap["A"]);
+  handleScoreAndLives();
 });
 
 document.getElementById("note-b").addEventListener("click", function () {
   playerNotes.push("B");
   playSound(keyToSoundMap["B"]);
+  handleScoreAndLives();
 });
 
 document.getElementById("note-c2").addEventListener("click", function () {
   playerNotes.push("C");
   playSound(keyToSoundMap["C"]);
+  handleScoreAndLives();
 });
 
 // sound playback function
@@ -149,9 +157,26 @@ function handleResetGame() {
 let lives = 3;
 let score = 0;
 
-// Points to add and decrease basead in the answer.
-const pointMultiplier = 2;
-const pointDeduction = 1;
+function handleScoreAndLives() {
+  // Get result of answer and store in variable
+  const result = checkAnswer();
+
+  // Points to add and decrease basead in the answer.
+  const pointMultiplier = 15;
+  const pointDeduction = 15;
+
+  if (result.correctAnswer === true) {
+    score += pointMultiplier;
+    updateDisplay();
+  } else {
+    score -= pointDeduction;
+    lives -= 1;
+    if (lives <= 0) {
+      handleDisplayGameOver();
+    }
+    updateDisplay();
+  }
+}
 
 function updateDisplay() {
   console.log(`Lives remaining: ${lives}`);
@@ -171,4 +196,3 @@ function updateDisplay() {
     }
   }
 }
-updateDisplay();
