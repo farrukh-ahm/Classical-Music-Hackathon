@@ -65,7 +65,7 @@ body{
   background-color: #e7e7e7;
 }
 
-
+/* ------ Rules Modal -------- */
 .rules-modal{
     position: absolute;
     top: 50%;
@@ -74,11 +74,16 @@ body{
     min-inline-size: min(100vw, 20rem);
     min-block-size: 30dvh;
     padding: 2em;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(15px);
     border: 1px solid #505050;
 }
 
-.rules-modal::backdrop{background-color:rgba(0,0,0,0.5);}
+.rules-modal::backdrop{
+
+  background-color:rgba(0,0,0,0.4);
+  backdrop-filter: blur(5px);
+
+}
 
 .rules-title{
     text-align: center;
